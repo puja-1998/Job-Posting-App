@@ -16,27 +16,56 @@ try{
 };
 
 // fetch job controller
-const fetchJob = (req, res) =>{
-    res.status(200).json({
-        success: true,
-        message:"Job Fetched Successfully"
-    });
+const fetchJob = async (req, res) =>{
+    try{
+        // Find All the Jobs
+       const jobList = await jobModel.find();
+
+       // find jobs by Id
+    //    const id = req.query.id;
+    //    const jobById = await jobModel.findById(id);
+
+
+    // find generic jobs using findByOne Method
+        //const location = req.query.location;
+        //const jobByLocation = await jobModel.findByOne({location});
+
+        res.status(200).json({
+            success: true,
+            message:"Job Fetched Successfully",
+            data: jobList,
+        });
+    }
+    catch(err) {
+        console.log("error while fetching the jobs", err);
+      } 
+    
 };
 
 // update job controller
-const updateJob = (req, res) =>{
-    res.status(200).json({
-        success: true,
-        message:"Job Updated Successfully"
-    });
+const updateJob = async (req, res) =>{
+    try{
+        res.status(200).json({
+            success: true,
+            message:"Job Updated Successfully"
+        });
+    }
+    catch(err) {
+        console.log("error while updating the jobs", err);
+      } 
 };
 
 // delete job controller
-const deleteJob = (req, res) =>{
-    res.status(200).json({
-        success: true,
-        message:"Job deleted Successfully"
-    });
+const deleteJob = async (req, res) =>{
+    try{
+        res.status(200).json({
+            success: true,
+            message:"Job deleted Successfully"
+        });
+    }
+    catch(err) {
+        console.log("error while deleting the jobs", err);
+      } 
 };
 
 

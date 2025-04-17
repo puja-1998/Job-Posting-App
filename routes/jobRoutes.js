@@ -15,10 +15,10 @@ router.post("/create-job", createJob);
 router.get("/jobs", fetchJob);
 
 //upadte / put job API 
-router.put("/update-job/:id", updateJob);
+router.put("/update-job", updateJob);
 
 //delete job API 
-router.delete("/delete-job/:id", deleteJob);
+router.delete("/delete-job", deleteJob);
 
 
 module.exports = router;

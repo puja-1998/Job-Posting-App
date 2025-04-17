@@ -47,10 +47,14 @@ const fetchJob = async (req, res) =>{
 const updateJob = async (req, res) =>{
     try{
          // Update the Jobs
-       const jobList = await jobModel.find();
+         let id = req.query.id;
+         let fieldToUpdate = req.body;
+        const jobUpdatedList = await jobModel.findByIdAndUpdate(id, fieldToUpdate);
+
         res.status(200).json({
             success: true,
-            message:"Job Updated Successfully"
+            message:"Jobs Updated Successfully",
+            data: jobUpdatedList,
         });
     }
     catch(err) {

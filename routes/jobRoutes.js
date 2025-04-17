@@ -18,7 +18,7 @@ router.get("/jobs", fetchJob);
 router.put("/update-job", updateJob);
 
 //delete job API 
-router.delete("/delete-job", deleteJob);
+router.delete("/delete-job/:id", deleteJob);
 
 
 module.exports = router;

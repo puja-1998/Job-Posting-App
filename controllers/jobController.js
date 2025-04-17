@@ -65,6 +65,10 @@ const updateJob = async (req, res) =>{
 // delete job controller
 const deleteJob = async (req, res) =>{
     try{
+        // delete the Jobs
+        let jobId = req.params.id;
+        await jobModel.findByIdAndDelete(jobId);
+
         res.status(200).json({
             success: true,
             message:"Job deleted Successfully"

@@ -1,0 +1,25 @@
+{
+  "name": "job-posting-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "job posting",
+    "get",
+    "post",
+    "update",
+    "delete",
+    "api"
+  ],
+  "author": "Puja",
+  "license": "ISC",
+  "description": "Job Posting Application",
+  "dependencies": {
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "nodemon": "^3.1.9"
+  }
+}

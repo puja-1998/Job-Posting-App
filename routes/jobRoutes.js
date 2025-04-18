@@ -4,9 +4,9 @@ const {createJob, fetchJob, updateJob, deleteJob} = require("../controllers/jobC
 //const jobControllers = require("../controllers/jobController");  // or this way also i can use it
 
 
-router.get("/", (req, res) => {
-    res.send("Hello from server")
-});
+// router.get("/", (req, res) => {
+//     res.send("Hello from server")
+// });
 
 //create-job API 
 router.post("/create-job", createJob);
